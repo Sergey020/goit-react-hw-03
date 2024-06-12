@@ -1,6 +1,12 @@
-const Contact = () => {
+import { VscAccount } from "react-icons/vsc";
+import { VscCallOutgoing } from "react-icons/vsc";
+const Contact = ({name, phone,deleteContact}) => {
   return (
-    <div>Contact</div>
+    <>
+      <p><VscAccount />{name}</p>
+      <p><VscCallOutgoing />{phone}</p>
+      <button onClick = {deleteContact}>Delete</button>
+      </>
   )
 }
 

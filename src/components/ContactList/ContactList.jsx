@@ -1,7 +1,15 @@
-const ContactList = () => {
-  return (
-    <div>ContactList</div>
-  )
-}
+import Contact from "../Contact/Contact";
 
-export default ContactList
+const ContactList = ({filterContactsArray, deleteContact}) => {
+  return (
+    <ul>
+      {filterContactsArray.map(contact => (
+        <li key={contact.id}>
+          <Contact name={contact.name} phone={contact.number} deleteContact={()=>deleteContact(contact.id)} />
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+export default ContactList;

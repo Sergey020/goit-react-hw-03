@@ -1,6 +1,9 @@
-const SeachBox = () => {
+const SeachBox = ({input,changeInput}) => {
   return (
-    <div>SeachBox</div>
+    <div>
+        <p>Find contacts by name</p>
+        <input type="text" value = {input} onChange = {changeInput}/>
+    </div>
   )
 }
 
